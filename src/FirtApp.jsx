@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const persona = {
   nombre : 'Cristian aguilar',
   edad : 25,
@@ -6,7 +8,7 @@ const persona = {
 
 const getSaludo = () => 'hola como estas';
 
-export const FirtApp = ( {title, edad}) => {
+export const FirtApp = ( {title, edad, pais}) => {
   return (
     // regla en React siempre agrupar en un elemento padre cuando se requiere retornar mas de dos elementos
     <>
@@ -18,4 +20,16 @@ export const FirtApp = ( {title, edad}) => {
     </>
     
   )
+}
+
+FirtApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  edad: PropTypes.number
+}
+
+// props por defecto
+FirtApp.defaultProps = {
+  title : "Curso de react",
+  edad : 0,
+  pais : 'El Salvador'
 }

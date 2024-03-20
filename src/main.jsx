@@ -5,12 +5,14 @@ import { FirtApp } from './FirtApp';
 
 // importar estilos css
 import './styles.css';
+import { CounterApp } from './CounterApp';
 
 {/* <HelloWordApp /> */}
 {/* <FirtApp /> */}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirtApp title={"Carlos Aguilar"} edad={29} />
+        {/* <FirtApp title="Eduardo" edad={33} /> */}
+        <CounterApp />
     </React.StrictMode>
 );
