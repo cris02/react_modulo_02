@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { HelloWordApp } from './HelloWordApp';
 import { FirtApp } from './FirtApp';
 
+// importar estilos css
+import './styles.css';
+
 {/* <HelloWordApp /> */}
 {/* <FirtApp /> */}
 
