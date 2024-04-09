@@ -1,21 +1,40 @@
-import PropTypes from 'prop-types'
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 // snipe para crear la estructura del componente rafc
 
 export const CounterApp = ({value}) => {
 
+  //seccion de hooks
+  const [counter, setCounter] = useState(value);
+
   // funcion
-  const handleAdd = (event) => {
-    console.log(event);
-    console.log('haciendo clic +1');
+  const handleAdd = () => {
+    setCounter(counter + 1);
   }
+
+  const handleRestar = () => {
+    setCounter(counter - 1)
+  }
+
+  const handleReset = () => {
+    setCounter(value);
+  }
+
+
   return (
     <>
         <h1>CounterApp</h1>
-        <p>{value}</p>
+        <p>{counter}</p>
 
         <button onClick={ handleAdd }>
           +1
+        </button>
+        <button onClick={handleRestar}>
+          -1
+        </button>
+        <button onClick={handleReset}>
+          Reset
         </button>
     </>
   )
@@ -26,6 +45,6 @@ CounterApp.propTypes = {
 }
 
 CounterApp.defaultProps = {
-    value : 10
+    value : 15
 }
 
